@@ -1,5 +1,5 @@
-name: Build
-on: [push, pull_request, workflow_dispatch]
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+- name: Build ZMK
+        uses: zmkfirmware/zmk-build-action@v3
+        with:
+          board: promicro_nrf52840
+          shield: macro12
