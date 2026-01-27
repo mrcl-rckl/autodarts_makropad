@@ -1,23 +1,28 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h> // Erforderlich für den Mausklick
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
 
 / {
+    behaviors {
+        // Kurzer Tipp: S | 5s Halten: Bluetooth-Verbindung löschen
+        s_bt_clr: s_bt_clr {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <5000>; 
+            flavor = "tap-preferred";
+            bindings = <&bt BT_CLR>, <&kp S>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                // Reihe 1
-                &kp S          &kp R          &kp F5
-                
-                // Reihe 2
-                &kp BSPC       &kp G          &kp RET
-                
-                // Reihe 3 (Mausklick Mitte ist hardwareseitig ein normaler Klick)
+                &s_bt_clr 0 0  &kp R          &kp F5
+                &kp BSPC       &kp G          &kp ENTER
                 &none          &mkp LCLK      &kp F11
-                
-                // Reihe 4
                 &kp N1         &kp N2         &kp N3
             >;
         };
