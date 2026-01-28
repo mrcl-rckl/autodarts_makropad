@@ -5,13 +5,13 @@
 
 / {
     behaviors {
-        // Da die Befehle hier fest drinstehen, nutzen wir 0 Zellen
-        s_bt_clr: s_bt_clr {
+        // Wir definieren ein "Hold-Tap" namens 'ht_bt', das zwei Parameter erwartet
+        ht_bt: ht_bt {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>; // Geändert von 2 auf 0
+            #binding-cells = <2>; // Wichtig: 2 Zellen für die zwei Befehle
             tapping-term-ms = <5000>; 
             flavor = "tap-preferred";
-            bindings = <&bt BT_CLR &kp S>;
+            bindings = <&bt>, <&kp>; // Hier sagen wir nur: Ein BT-Befehl und ein Key-Press
         };
     };
 
@@ -20,10 +20,11 @@
 
         default_layer {
             bindings = <
-                &s_bt_clr      &kp R          &kp F5    // "0 0" am Ende entfernt
-                &kp BSPC       &kp G          &kp ENTER
-                &none          &mkp LCLK      &kp F11
-                &kp N1         &kp N2         &kp N3
+                // Hier übergeben wir BT_CLR (für Hold) und S (für Tap)
+                &ht_bt BT_CLR S  &kp R          &kp F5
+                &kp BSPC         &kp G          &kp ENTER
+                &none            &mkp LCLK      &kp F11
+                &kp N1           &kp N2         &kp N3
             >;
         };
     };
