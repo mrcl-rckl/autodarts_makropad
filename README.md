@@ -36,9 +36,11 @@
 <hr />
 
 <h2 id="manual-en">📖 Comprehensive Manual</h2>
-<blockquote>
+<p>
   This repository includes a <b>detailed 33-page PDF instruction manual</b>. It covers the entire process: from optimized 3D printing settings and complex matrix soldering to flashing the ZMK firmware and customized key mapping.
-</blockquote>
+  <br><br>
+  👉 <b>View the Instructions here:</b> <a href="https://github.com/mrcl-rckl/autodarts_macropad/blob/main/instructions/0_EN_Instructions.pdf">0_EN_Instructions.pdf</a>
+</p>
 
 <hr />
 
@@ -206,9 +208,11 @@
 <hr />
 
 <h2>📖 Umfangreiche Anleitung</h2>
-<blockquote>
+<p>
   In diesem Projektarchiv findest du eine <b>detaillierte 33-seitige PDF-Anleitung</b>. Diese führt dich Schritt für Schritt durch den gesamten Prozess: von den optimalen Einstellungen für den 3D-Druck über das präzise Verlöten der Tastatur-Matrix bis hin zur Installation der Steuersoftware und der persönlichen Tastenbelegung.
-</blockquote>
+  <br><br>
+  👉 <b>Hier zur Anleitung:</b> <a href="https://github.com/mrcl-rckl/autodarts_macropad/blob/main/instructions/0_EN_Instructions.pdf">0_EN_Instructions.pdf</a>
+</p>
 
 <hr />
 
@@ -335,7 +339,7 @@
 
 <h2>💡 Bedienung & Fehlerbehebung</h2>
 <ul>
-  <li><b>Ladevorgang:</b> Der physische Kippschalter <b>MUSS auf EIN (ON)</b> stehen, damit der Akku über USB-C geladen werden kann. Steht er auf AUS (OFF), ist der Ladestromkreis unterbrochen. 🔌</li>
+  <li><b>Ladevorgang:</b> Der physische Kippschalter <b>MUSS auf EIN (ON)</b> stehen, damit der Akku über USB-C geladen werden kann. 🔌</li>
   <li><b>Verbindung zurücksetzen:</b> Um die Bluetooth-Kopplung zu löschen, halte die Tasten <b>[Pfeil Links] + [Pfeil Rechts]</b> gleichzeitig für 5 Sekunden gedrückt. 🔄</li>
   <li><b>Bootloader-Modus:</b> Falls die Platine nicht als Laufwerk erkannt wird, überbrücke kurz zweimal hintereinander die Kontakte <b>GND</b> und <b>RST</b>. 💾</li>
   <li><b>Eingabe-Fokus:</b> Das Browserfenster muss aktiv sein („im Fokus“), damit Autodarts die Tastaturbefehle registriert. 🎯</li>
