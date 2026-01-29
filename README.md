@@ -44,6 +44,10 @@
   This repository includes a <b>detailed 32-page PDF instruction manual</b>. It covers the entire process: from optimized 3D printing settings and complex matrix soldering to flashing the ZMK firmware and customized key mapping.
   <br><br>
   👉 <b>View the Instructions here:</b> <a href="https://github.com/mrcl-rckl/autodarts_macropad/blob/main/instructions/0_EN_Instructions.pdf">0_EN_Instructions.pdf</a>
+  <br>
+  👉 <b>3D Models on Printables:</b> <a href="https://www.printables.com/model/1576041-autodarts-macropad">Printables.com</a>
+  <br>
+  👉 <b>3D Models on MakerWorld:</b> <a href="https://makerworld.com/de/models/2319788-autodarts-macropad">MakerWorld.com</a>
 </p>
 
 <hr />
@@ -226,7 +230,7 @@
   <li><b>🔋 Enorme Akkulaufzeit:</b> Eine einzige Ladung hält bei normaler Nutzung bis zu <b>6 Wochen</b>. Der integrierte Tiefschlafmodus schont die Batterie zusätzlich. ⚡</li>
   <li><b>⌨️ Hochwertiger Druckpunkt:</b> 12 mechanische Gateron G Pro 3.0 Schalter bieten ein erstklassiges haptisches Feedback und garantieren eine zuverlässige Bedienung. ⌨️</li>
   <li><b>☁️ Cloud-Konfiguration:</b> Die Tastenbelegung kann direkt im Browser über GitHub-Automatisierungen angepasst werden – es ist keine lokale Programmierumgebung erforderlich. ☁️</li>
-  [cite_start]<li><b>🖥️ System-Integration:</b> Der Akkustand wird direkt in den Einstellungen von Windows oder Linux angezeigt [cite: 136-138]. 🖥️</li>
+  <li><b>🖥️ System-Integration:</b> Der Akkustand wird direkt in den Einstellungen von Windows oder Linux angezeigt. 🖥️</li>
 </ul>
 
 <hr />
@@ -236,6 +240,10 @@
   In diesem Projektarchiv findest du eine <b>detaillierte 32-seitige PDF-Anleitung</b>. Diese führt dich Schritt für Schritt durch den gesamten Prozess: von den optimalen Einstellungen für den 3D-Druck über das präzise Verlöten der Tastatur-Matrix bis hin zur Installation der Steuersoftware und der persönlichen Tastenbelegung.
   <br><br>
   👉 <b>Hier zur Anleitung:</b> <a href="https://github.com/mrcl-rckl/autodarts_macropad/blob/main/instructions/0_EN_Instructions.pdf">0_EN_Instructions.pdf</a>
+  <br>
+  👉 <b>3D-Modelle auf Printables:</b> <a href="https://www.printables.com/model/1576041-autodarts-macropad">Printables.com</a>
+  <br>
+  👉 <b>3D-Modelle auf MakerWorld:</b> <a href="https://makerworld.com/de/models/2319788-autodarts-macropad">MakerWorld.com</a>
 </p>
 
 <hr />
