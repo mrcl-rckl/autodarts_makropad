@@ -14,16 +14,18 @@
             bindings = <&none>, <&bt BT_CLR>;
         };
         
-        // Taste N1 (Unten Links): 1x = Geteilt (/), 2x = Zahl 1
+        // --- Untere Reihe (Sonderzeichen / Zahlen) ---
+
+        // Taste N1: 1x = Geteilt (/), 2x = Zahl 1
         td_n1: tap_dance_n1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_N1";
             #binding-cells = <0>;
-            tapping-term-ms = <200>; // Zeitfenster für Doppelklick
+            tapping-term-ms = <200>; 
             bindings = <&kp KP_DIVIDE>, <&kp N1>; 
         };
 
-        // Taste N2 (Unten Mitte): 1x = Mal (*), 2x = Zahl 2
+        // Taste N2: 1x = Mal (*), 2x = Zahl 2
         td_n2: tap_dance_n2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_N2";
@@ -32,7 +34,7 @@
             bindings = <&kp KP_MULTIPLY>, <&kp N2>;
         };
 
-        // Taste N3 (Unten Rechts): 1x = Minus (-), 2x = Zahl 3
+        // Taste N3: 1x = Minus (-), 2x = Zahl 3
         td_n3: tap_dance_n3 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_N3";
@@ -40,12 +42,32 @@
             tapping-term-ms = <200>;
             bindings = <&kp KP_MINUS>, <&kp N3>; 
         };
+
+        // --- Mittlere Reihe (Zahlen Erweiterung) ---
+
+        // Taste N4: 1x = Zahl 4, 2x = Zahl 5
+        td_n4_n5: tap_dance_n4_n5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_N4_N5";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N4>, <&kp N5>;
+        };
+
+        // Taste N6: 1x = Zahl 6, 2x = Zahl 7
+        td_n6_n7: tap_dance_n6_n7 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_N6_N7";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N6>, <&kp N7>;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
         
-        // Bluetooth Reset Combo (Backspace + Enter)
+        // Bluetooth Reset Combo (Backspace + Enter -> Doppelklick)
         combo_bt_clr {
             timeout-ms = <100>;
             key-positions = <6 8>;
@@ -59,7 +81,7 @@
         default_layer {
             bindings = <
                 &kp S          &kp F5          &kp F11     // 0, 1, 2
-                &kp N4         &mkp LCLK       &kp N6      // 3, 4, 5
+                &td_n4_n5      &mkp LCLK       &td_n6_n7   // 3, 4, 5 
                 &kp BSPC       &kp A           &kp ENTER   // 6, 7, 8
                 &td_n1         &td_n2          &td_n3      // 9, 10, 11
             >;
