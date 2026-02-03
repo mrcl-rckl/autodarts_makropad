@@ -45,22 +45,22 @@
 
         // --- Mittlere Reihe (Zahlen Erweiterung) ---
 
-        // Taste N4: 1x = Zahl 4, 2x = Zahl 5
-        td_n4_n5: tap_dance_n4_n5 {
+        // Taste N4: 1x = Zahl 5, 2x = Zahl 6
+        td_n5_n6: tap_dance_n5_n6 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_N4_N5";
+            label = "TD_N5_N6";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N4>, <&kp N5>;
+            bindings = <&kp N5>, <&kp N6>;
         };
 
-        // Taste N6: 1x = Zahl 6, 2x = Zahl 7
-        td_n6_n7: tap_dance_n6_n7 {
+        // Taste N6: 1x = Zahl 7, 2x = Zahl 8
+        td_n7_n8: tap_dance_n7_n8 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_N6_N7";
+            label = "TD_N7_N8";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N6>, <&kp N7>;
+            bindings = <&kp N7>, <&kp N8>;
         };
     };
 
@@ -81,7 +81,7 @@
         default_layer {
             bindings = <
                 &kp S          &kp F5          &kp F11     // 0, 1, 2
-                &td_n4_n5      &mkp LCLK       &td_n6_n7   // 3, 4, 5 
+                &td_n5_n6      &mkp LCLK       &td_n7_n8   // 3, 4, 5 
                 &kp BSPC       &kp A           &kp ENTER   // 6, 7, 8
                 &td_n1         &td_n2          &td_n3      // 9, 10, 11
             >;
