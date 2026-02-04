@@ -276,7 +276,7 @@
 <h2 id="diagrams-de">🗺️ Stromlaufplan & Anschlussbelegung</h2>
 <div align="center">
   <h3>🛠️ Schaltplan der Tastatur-Matrix</h3>
-  <img src="https://github.com/mrcl-rckl/autodarts_macropad/blob/main/readme-images/0_Wiring_Diagram.png?raw=true" alt="Stromlaufplan" width="800">
+  <img src="https://github.com/mrcl-rckl/autodarts_macropad/blob/main/readme-images/0_Schaltplan.png?raw=true" alt="Stromlaufplan" width="800">
   <br><br>
   <h3>🔌 Anschlussbelegung des Steuerungsmoduls</h3>
   <img src="https://github.com/mrcl-rckl/autodarts_macropad/blob/main/readme-images/0_Pin_Diagram.png?raw=true" alt="Anschlussbelegung" width="800">
