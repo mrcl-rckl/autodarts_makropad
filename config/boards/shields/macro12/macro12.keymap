@@ -4,87 +4,80 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
-    behaviors {
-        // --- Bluetooth Reset ---
-        td_bt_reset: tap_dance_bt_reset {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_BT_RESET";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&none>, <&bt BT_CLR>;
-        };
-        
-        // --- Untere Reihe (Sonderzeichen / Zahlen) ---
+    behaviors {
+        // --- Bluetooth Reset ---
+        td_bt_reset: tap_dance_bt_reset {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_BT_RESET";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&none>, <&bt BT_CLR>;
+        };
+        
+        // --- Untere Reihe (Sonderzeichen / Zahlen) ---
+        td_n1: tap_dance_n1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_N1";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>; 
+            bindings = <&kp KP_DIVIDE>, <&kp N1>; 
+        };
 
-        // Taste N1: 1x = Geteilt (/), 2x = Zahl 1
-        td_n1: tap_dance_n1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N1";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>; 
-            bindings = <&kp KP_DIVIDE>, <&kp N1>; 
-        };
+        td_n2: tap_dance_n2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_N2";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp KP_MULTIPLY>, <&kp N2>;
+        };
 
-        // Taste N2: 1x = Mal (*), 2x = Zahl 2
-        td_n2: tap_dance_n2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N2";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp KP_MULTIPLY>, <&kp N2>;
-        };
+        td_n3: tap_dance_n3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_N3";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp KP_MINUS>, <&kp N3>; 
+        };
 
-        // Taste N3: 1x = Minus (-), 2x = Zahl 3
-        td_n3: tap_dance_n3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N3";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp KP_MINUS>, <&kp N3>; 
-        };
+        // --- Mittlere Reihe (Zahlen Erweiterung) ---
+        td_n5_n6: tap_dance_n5_n6 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_N5_N6";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N5>, <&kp N6>;
+        };
 
-        // --- Mittlere Reihe (Zahlen Erweiterung) ---
+        td_n7_n8: tap_dance_n7_n8 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_N7_N8";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N7>, <&kp N8>;
+        };
+    };
 
-        // Taste N4: 1x = Zahl 5, 2x = Zahl 6
-        td_n5_n6: tap_dance_n5_n6 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N5_N6";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N5>, <&kp N6>;
-        };
+    combos {
+        compatible = "zmk,combos";
+        
+        // Bluetooth Reset Combo (Backspace + Enter)
+        combo_bt_clr {
+            timeout-ms = <100>;
+            key-positions = <6 8>;
+            bindings = <&td_bt_reset>;
+        };
+    };
 
-        // Taste N6: 1x = Zahl 7, 2x = Zahl 8
-        td_n7_n8: tap_dance_n7_n8 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N7_N8";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N7>, <&kp N8>;
-        };
-    };
+    keymap {
+        compatible = "zmk,keymap";
 
-    combos {
-        compatible = "zmk,combos";
-        
-        // Bluetooth Reset Combo (Backspace + Enter -> Doppelklick)
-        combo_bt_clr {
-            timeout-ms = <100>;
-            key-positions = <6 8>;
-            bindings = <&td_bt_reset>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &kp S          &kp F5          &kp F11     // 0, 1, 2
-                &td_n5_n6      &mkp LCLK       &td_n7_n8   // 3, 4, 5 
-                &kp BSPC       &kp A           &kp ENTER   // 6, 7, 8
-                &td_n1         &td_n2          &td_n3      // 9, 10, 11
-            >;
-        };
-    };
+        default_layer {
+            bindings = <
+                &kp S          &kp F5          &kp F11     
+                &td_n5_n6      &mkp LCLK       &td_n7_n8   
+                &kp BSPC       &kp A           &kp ENTER   
+                &td_n1         &td_n2          &td_n3      
+            >;
+        };
+    };
 };
